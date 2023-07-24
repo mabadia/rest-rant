@@ -3,8 +3,9 @@
 REST-Rant is an app where users can review restaurants.
 color scheme primary aqua secondary red highlight yellow.
 
-| Method | Path | Purpose |
----------------------------
+# Routes
+| **Method** | **Path** | **Purpose** |
+|--------|------|---------|
 | GET | / | Home page |
 | GET | /places | Places index page |
 | POST | /places | Create new page |
@@ -16,3 +17,6 @@ color scheme primary aqua secondary red highlight yellow.
 | POST | /places/:id/rant | Create a rant(comment) about a particular place |
 | DELETE | /places/:id/rant/:rantId | Delete a rant(comment) about a particular place |
 | GET | * | 404 page (matches any route not defined above) |
+
+# Database
+places
