@@ -20,3 +20,10 @@ color scheme primary aqua secondary red highlight yellow.
 
 # Database
 places
+| **Field Name** | **Data Type** |
+|--------|------|
+| name | string |
+| city | string |
+| state | string |
+| cuisines | string |
+| pic | string(a URL) |
