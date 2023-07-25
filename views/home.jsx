@@ -11,4 +11,4 @@ function home() {
     )
  }
 
-module.export = home
+module.exports = home
