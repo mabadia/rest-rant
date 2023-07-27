@@ -11,3 +11,4 @@ module.exports = [{
     cuisines: 'Coffee, Bakery',
     pic: 'http://placekitten.com/250/250'
 }];
+
