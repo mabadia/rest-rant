@@ -18,8 +18,6 @@ function show(data) {
                         Delete
                     </button>
                 </form>
-
-
             </main>
         </Def>
     )
