@@ -2,7 +2,14 @@ const React = require('react')
 const Def = require('../default')
 
 function show(data) {
-   
+    let message = ''
+    if (data.message) {
+        message = (
+            <h4 className="alert-danger">
+                {data.message}
+            </h4>
+        )
+    }
     return (
         <Def>
             <main>
@@ -15,6 +22,8 @@ function show(data) {
                     </div>
                     <div className="col-sm-6">
                         <h1>{data.place.name}</h1>
+                        <h1>Add a New Place</h1>
+                        {message}
                         <h2>
                             Rating
                         </h2>
@@ -51,3 +60,20 @@ function show(data) {
 }
 
 module.exports = show
+
+const React = require('react')
+const Def = require('../default')
+
+function new_form(data) {
+
+    return (
+        <Def>
+            <main>
+
+                ...
+            </main>
+        </Def>
+    )
+}
+
+module.exports = new_form
