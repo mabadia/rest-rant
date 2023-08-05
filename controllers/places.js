@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const db = require('../models/places')
+const db = require('../models')
 // const places = require('../models/places');
 
 router.get('/', (req, res) => {
@@ -49,7 +49,6 @@ router.get('/:id', (req, res) => {
       res.render('error404')
   })
 });
-
 
 
 router.put('/:id', (req, res) => {

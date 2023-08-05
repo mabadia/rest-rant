@@ -27,7 +27,6 @@ function show(data) {
                         <h2>
                             Rating
                         </h2>
-                        {rating}
                         <br />
                         <h2>
                             Description
@@ -52,7 +51,7 @@ function show(data) {
                 <hr />
                 <h2>Comments</h2>
                 <div className="row">
-                    {comments}
+                
                 </div>
             </main>
         </Def>
@@ -61,19 +60,4 @@ function show(data) {
 
 module.exports = show
 
-const React = require('react')
-const Def = require('../default')
 
-function new_form(data) {
-
-    return (
-        <Def>
-            <main>
-
-                ...
-            </main>
-        </Def>
-    )
-}
-
-module.exports = new_form
