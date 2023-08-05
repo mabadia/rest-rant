@@ -2,14 +2,6 @@ const React = require('react')
 const Def = require('../default')
 
 function show(data) {
-    let message = ''
-    if (data.message) {
-        message = (
-            <h4 className="alert-danger">
-                {data.message}
-            </h4>
-        )
-    }
     let comments = (
         <h3 className="inactive">
             No comments yet!
@@ -17,18 +9,18 @@ function show(data) {
     )
     if (data.place.comments.length) {
         comments = data.place.comments.map(c => {
-          return (
-            <div className="border">
-              <h2 className="rant">{c.rant ? 'Rant! ðŸ˜¡' : 'Rave! ðŸ˜»'}</h2>
-              <h4>{c.content}</h4>
-              <h3>
-                <stong>- {c.author}</stong>
-              </h3>
-              <h4>Rating: {c.stars}</h4>
-            </div>
-          )
+            return (
+                <div className="border">
+                    <h2 className="rant">{c.rant ? 'Rant! ðŸ˜¡' : 'Rave! ðŸ˜»'}</h2>
+                    <h4>{c.content}</h4>
+                    <h3>
+                        <stong>- {c.author}</stong>
+                    </h3>
+                    <h4>Rating: {c.stars}</h4>
+                </div>
+            )
         })
-      }
+    }
     return (
         <Def>
             <main>
@@ -42,7 +34,6 @@ function show(data) {
                     <div className="col-sm-6">
                         <h1>{data.place.name}</h1>
                         <h1>Add a New Place</h1>
-                        {message}
                         <h2>
                             Rating
                         </h2>
@@ -64,6 +55,30 @@ function show(data) {
                             <button type="submit" className="btn btn-danger">
                                 Delete
                             </button>
+                        </form>
+                        <h2>Got Your Own Rant or Rave?</h2>
+                        <form action={`/places/${data.place.id}/comment`} method="POST">
+                            <div className="row">
+                                <div className="form-group col-sm-12">
+                                    <label htmlFor="content">Content</label>
+                                    <textarea id="content" name="content" className="form-control"></textarea>
+                                </div>
+                            </div>
+                            <div className="row">
+                                <div className="form-group col-sm-4">
+                                    <label htmlFor="author">Author</label>
+                                    <input id="author" name="author" className="form-control" />
+                                </div>
+                                <div className="form-group col-sm-4">
+                                    <label htmlFor="stars">Star Rating</label>
+                                    <input type="range" step="0.5" min="1" max="5" id="stars" name="stars" className="form-control" />
+                                </div>
+                                <div className="form-group col-sm-2">
+                                    <label htmlFor="rant">Rant?</label>
+                                    <input type="checkbox" id="rant" name="rant" className="form-control" />
+                                </div>
+                            </div>
+                            <input type="submit" className="btn btn-primary" value="Add Comment" />
                         </form>
                     </div>
                 </div>
