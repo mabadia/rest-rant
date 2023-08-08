@@ -30,6 +30,14 @@ function edit_form(data) {
                             <label htmlFor="founded">Founding Year</label>
                             <input className="form-control" id="founded" name="founded" value={data.place.founded} />
                         </div>
+                        <div className="form-group col-sm-4">
+                            <label htmlFor="founded">Founded</label>
+                            <input className="form-control"
+                                id="founded"
+                                name="founded"
+                                value={data.place.founded}
+                            />
+                        </div>
                     </div>
                     <div className="form-group">
                         <label htmlFor="cuisines">Cuisines</label>
@@ -44,3 +52,14 @@ function edit_form(data) {
 }
 
 module.exports = edit_form
+
+    < h1 > Edit Place</h1 >
+        <form method="POST" action={`/places/${data.place.id}?_method=PUT`}>
+            ...
+            <div className="row">
+                ...
+
+            </div>
+            ...
+            <input className="btn btn-primary" type="submit" value="Update Place" />
+        </form>
