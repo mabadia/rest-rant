@@ -52,14 +52,3 @@ function edit_form(data) {
 }
 
 module.exports = edit_form
-
-    < h1 > Edit Place</h1 >
-        <form method="POST" action={`/places/${data.place.id}?_method=PUT`}>
-            ...
-            <div className="row">
-                ...
-
-            </div>
-            ...
-            <input className="btn btn-primary" type="submit" value="Update Place" />
-        </form>
