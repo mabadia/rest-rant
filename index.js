@@ -27,5 +27,3 @@ app.get('*', (req, res) => {
 });
 //listen for Connections
 app.listen(process.env.PORT);
-
-module.exports = app;
