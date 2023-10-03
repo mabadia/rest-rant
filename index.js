@@ -20,7 +20,6 @@ mongoose.connect(process.env.MONGO_URI, {
   useUnifiedTopology: true
 });
 app.get('/', (req, res) => {
-
   res.render('home');
 });
 
